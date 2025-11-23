@@ -98,10 +98,27 @@ export function Info() {
       icon: (
         <svg
           className="w-8 h-8 text-white"
-          fill="currentColor"
           viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          {/* Main sparkle shape */}
+          <path
+            d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z"
+            fill="currentColor"
+          />
+          {/* Secondary sparkle */}
+          <path
+            d="M19 14L19.8 16.8L22 17.5L19.8 18.2L19 21L18.2 18.2L16 17.5L18.2 16.8L19 14Z"
+            fill="currentColor"
+            opacity="0.7"
+          />
+          {/* Tertiary sparkle */}
+          <path
+            d="M6 3L6.5 5L8.5 5.5L6.5 6L6 8L5.5 6L3.5 5.5L5.5 5L6 3Z"
+            fill="currentColor"
+            opacity="0.7"
+          />
         </svg>
       ),
       tags: ["AI Analysis", "Auto-scan"],

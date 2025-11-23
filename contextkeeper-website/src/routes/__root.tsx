@@ -9,7 +9,7 @@ const RootLayout = () => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
     document.addEventListener("mousemove", handleMouseMovement);
-    return document.removeEventListener("mousemove", handleMouseMovement);
+    return () => document.removeEventListener("mousemove", handleMouseMovement);
   }, []);
   return (
     <>
