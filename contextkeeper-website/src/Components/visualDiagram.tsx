@@ -1,13 +1,9 @@
-import React from "react";
 import {
   Activity,
   PauseCircle,
   BrainCircuit,
   Save,
   ArrowDown,
-  Database,
-  FileCode,
-  Sparkles,
 } from "lucide-react";
 
 const FlowNode = ({

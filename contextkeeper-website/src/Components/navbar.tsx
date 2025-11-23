@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-
+// import { Logo } from "./logo";
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -20,8 +20,11 @@ export function Navbar() {
           to="/"
           className="flex items-center gap-2 text-white font-semibold text-lg md:text-xl z-50"
         >
+          {/* <span>
+            <Logo></Logo>
+          </span> */}
           <span>
-            Context<span className="text-blue-500">keeper</span>
+            Idle<span className="text-blue-500">Mind</span>
           </span>
         </Link>
         {/* Desktop Navigation */}
