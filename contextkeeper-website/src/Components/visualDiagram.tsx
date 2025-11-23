@@ -78,7 +78,7 @@ const WorkflowFlow = () => {
   return (
     <div className="w-full py-16 bg-[#050505] flex flex-col items-center justify-center font-sans">
       <div className="mb-12 text-center">
-        <h2 className="text-3xl font-bold text-white mb-2">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
           System Architecture
         </h2>
         <p className="text-gray-400">
