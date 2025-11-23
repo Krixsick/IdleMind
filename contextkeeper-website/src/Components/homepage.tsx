@@ -17,7 +17,7 @@ export function Homepage() {
       <div className="w-full h-full flex flex-col justify-center items-center gap-8">
         <div className="flex flex-col items-center justify-center gap-y-8 text-6xl md:text-7xl lg:text-8xl ">
           <p className="font-bold text-white">The AI Copilot That</p>
-          <p className="bg-blue-400 bg-clip-text text-transparent py-2">
+          <p className="bg-blue-400 bg-clip-text font-bold text-transparent py-2">
             Works while you're away
           </p>
         </div>

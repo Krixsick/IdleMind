@@ -12,7 +12,7 @@ export function Info() {
       blue: {
         border: "hover:border-blue-500/50",
         shadow: "hover:shadow-[0_0_40px_rgba(0,122,204,0.2)]",
-        gradient: "from-blue-500 to-blue-600",
+        gradient: "from-gray-800 to-gray-900",
         gradientOverlay: "from-blue-500/5",
         hover: "group-hover:text-blue-400",
         tag: "bg-blue-500/10 border-blue-500/30 text-blue-400",
@@ -20,7 +20,7 @@ export function Info() {
       purple: {
         border: "hover:border-purple-500/50",
         shadow: "hover:shadow-[0_0_40px_rgba(168,85,247,0.2)]",
-        gradient: "from-purple-500 to-purple-600",
+        gradient: "from-gray-800 to-gray-900",
         gradientOverlay: "from-purple-500/5",
         hover: "group-hover:text-purple-400",
         tag: "bg-purple-500/10 border-purple-500/30 text-purple-400",
@@ -28,7 +28,7 @@ export function Info() {
       orange: {
         border: "hover:border-orange-500/50",
         shadow: "hover:shadow-[0_0_40px_rgba(249,115,22,0.2)]",
-        gradient: "from-orange-500 to-orange-600",
+        gradient: "from-gray-800 to-gray-900",
         gradientOverlay: "from-orange-500/5",
         hover: "group-hover:text-orange-400",
         tag: "bg-orange-500/10 border-orange-500/30 text-orange-400",
@@ -36,7 +36,7 @@ export function Info() {
       green: {
         border: "hover:border-green-500/50",
         shadow: "hover:shadow-[0_0_40px_rgba(34,197,94,0.2)]",
-        gradient: "from-green-500 to-green-600",
+        gradient: "from-gray-800 to-gray-900",
         gradientOverlay: "from-green-500/5",
         hover: "group-hover:text-green-400",
         tag: "bg-green-500/10 border-green-500/30 text-green-400",
@@ -97,27 +97,57 @@ export function Info() {
       color: "blue",
       icon: (
         <svg
-          className="w-8 h-8 text-white"
+          className="w-8 h-8"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
+          <defs>
+            <linearGradient
+              id="gemini-gradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
+              <stop
+                offset="0%"
+                style={{ stopColor: "#4285F4", stopOpacity: 1 }}
+              />
+              <stop
+                offset="25%"
+                style={{ stopColor: "#9B72F2", stopOpacity: 1 }}
+              />
+              <stop
+                offset="50%"
+                style={{ stopColor: "#D96570", stopOpacity: 1 }}
+              />
+              <stop
+                offset="75%"
+                style={{ stopColor: "#F2A25C", stopOpacity: 1 }}
+              />
+              <stop
+                offset="100%"
+                style={{ stopColor: "#34A853", stopOpacity: 1 }}
+              />
+            </linearGradient>
+          </defs>
           {/* Main sparkle shape */}
           <path
             d="M12 2L13.5 8.5L20 10L13.5 11.5L12 18L10.5 11.5L4 10L10.5 8.5L12 2Z"
-            fill="currentColor"
+            fill="url(#gemini-gradient)"
           />
           {/* Secondary sparkle */}
           <path
             d="M19 14L19.8 16.8L22 17.5L19.8 18.2L19 21L18.2 18.2L16 17.5L18.2 16.8L19 14Z"
-            fill="currentColor"
-            opacity="0.7"
+            fill="url(#gemini-gradient)"
+            opacity="0.8"
           />
           {/* Tertiary sparkle */}
           <path
             d="M6 3L6.5 5L8.5 5.5L6.5 6L6 8L5.5 6L3.5 5.5L5.5 5L6 3Z"
-            fill="currentColor"
-            opacity="0.7"
+            fill="url(#gemini-gradient)"
+            opacity="0.8"
           />
         </svg>
       ),
@@ -130,17 +160,14 @@ export function Info() {
       color: "purple",
       icon: (
         <svg
-          className="w-8 h-8 text-white"
-          fill="none"
-          stroke="currentColor"
+          className="w-8 h-8"
           viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
-          />
+          {/* Two parallel vertical lines - ElevenLabs logo */}
+          <rect x="7" y="4" width="3" height="16" rx="1.5" fill="white" />
+          <rect x="14" y="4" width="3" height="16" rx="1.5" fill="white" />
         </svg>
       ),
       tags: ["Voice Synthesis", "Audio Feedback"],
@@ -152,16 +179,19 @@ export function Info() {
       color: "orange",
       icon: (
         <svg
-          className="w-8 h-8 text-white"
-          fill="none"
-          stroke="currentColor"
+          className="w-8 h-8"
           viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
+          {/* Cloudflare logo */}
           <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+            d="M17.6 14.6c.1-.3.1-.6 0-.9-.1-.4-.4-.7-.8-.8l-10.5-2c-.2 0-.3-.1-.5-.1-.5 0-.9.2-1.2.6-.3.3-.4.8-.3 1.2l.6 2.3c.1.4.4.7.8.8l10.5 2c.2 0 .3.1.5.1.5 0 .9-.2 1.2-.6.1-.2.2-.4.2-.6z"
+            fill="#F6821F"
+          />
+          <path
+            d="M20.9 13.6c-.1-.2-.2-.4-.4-.5-.2-.1-.4-.2-.6-.2l-2.3-.4c-.1-.3-.2-.5-.4-.7-.4-.5-1-.8-1.7-.8H6.9c-2.8 0-5.3 1.9-6 4.7-.1.3 0 .7.2 1 .2.3.5.4.8.4h17.4c.3 0 .6-.2.8-.4.2-.3.3-.6.2-.9-.1-.5-.3-.9-.4-1.2z"
+            fill="#F6821F"
           />
         </svg>
       ),
@@ -174,11 +204,15 @@ export function Info() {
       color: "green",
       icon: (
         <svg
-          className="w-8 h-8 text-white"
-          fill="currentColor"
+          className="w-8 h-8"
           viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z" />
+          <path
+            d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"
+            fill="#007ACC"
+          />
         </svg>
       ),
       tags: ["Native Extension", "Zero Setup"],
