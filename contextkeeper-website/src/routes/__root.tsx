@@ -1,7 +1,9 @@
-import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
+import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import { useEffect, useState } from "react";
 import { Navbar } from "../Components/navbar";
+import { HowItWorksAnimated } from "../Components/visualDiagram";
+import { Footer } from "../Components/footer";
 const RootLayout = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   useEffect(() => {
@@ -32,6 +34,8 @@ const RootLayout = () => {
       <Navbar></Navbar>
       <Outlet />
       <TanStackRouterDevtools />
+      <HowItWorksAnimated></HowItWorksAnimated>
+      <Footer></Footer>
     </>
   );
 };

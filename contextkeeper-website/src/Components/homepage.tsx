@@ -1,6 +1,6 @@
 import { useState } from "react";
 export function Homepage() {
-  const [HoveredButton, setHoveredButton] = useState<string | null>(null);
+  const [, setHoveredButton] = useState<string | null>(null);
   return (
     <div className="bg-[#050505] w-screen h-[90vh] relative flex flex-col items-center">
       {/* System Status tag */}

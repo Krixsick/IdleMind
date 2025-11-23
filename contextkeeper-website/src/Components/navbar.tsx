@@ -1,6 +1,12 @@
 import { Link } from "@tanstack/react-router";
 
 export function Navbar() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
   return (
     <>
       {/* Left Side */}
@@ -17,24 +23,24 @@ export function Navbar() {
         <div className="flex items-center justify-between w-[40%] min-w-[500px]">
           {/* Middle Side */}
           <div className="flex items-center gap-8">
-            <Link
-              to="/features"
+            <button
+              onClick={() => scrollToSection("features")}
               className="text-gray-300 hover:text-white transition-colors cursor-pointer"
             >
               Features
-            </Link>
-            <Link
-              to="/how-it-works"
+            </button>
+            <button
+              onClick={() => scrollToSection("how-it-works")}
               className="text-gray-300 hover:text-white transition-colors  cursor-pointer"
             >
               How It Works
-            </Link>
-            <Link
-              to="/demo"
+            </button>
+            <button
+              onClick={() => scrollToSection("Demo")}
               className="text-gray-300 hover:text-white transition-colors  cursor-pointer"
             >
               Demo
-            </Link>
+            </button>
             <a
               href="https://github.com/SquaredPiano/contextkeeper"
               target="_blank"
@@ -50,7 +56,7 @@ export function Navbar() {
           {/* Right Side */}
           <div className="flex items-center gap-4">
             <p className="px-4 py-2 border-2 border-blue-500/50 rounded-full text-blue-400 text-sm font-mono">
-              v0.0.1 Beta
+              version 1 Beta
             </p>
           </div>
         </div>
